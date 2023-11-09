@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --offcanvas-width: 300px;
+  --topNavbarHeight: 56px;
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+.row {
+  max-width: 430px;
+  display: flex;
+}
+
+.col-md-12 {
+  height: 20px;
+}
+
+img {
+  width: 880px;
+  height: 500px;
+}
+
+.row3 iframe {
+  width: 900px;
+  height: 200vh;
+}
+h2{
+  color: #2c3199;
+}
+.graph iframe {
+  width: 930px;
+  height: 540px;
+}
+.graph2 iframe {
+  width: 930px;
+  height: 540px;
+}
+
+.chart1 iframe {
+  width: 930px;
+  height: 540px;
+}
+
+main .container-fluid {
+  background-color: lightgreen;
+}
+
+.container-fluid .row,
+.container-fluid .row3 {
+  color: black;
+}
+
+.pt-3 {
+  padding-top: 0rem !important;
+}
+
+.row .col-md-12 {
+  height: 20px;
+  margin: auto;
+  padding: 20px;
+}
